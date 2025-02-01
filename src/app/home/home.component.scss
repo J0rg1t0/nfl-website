@@ -1,0 +1,64 @@
+/* Estilo para a seção Home */
+.home {
+  text-align: center;
+  padding: 50px 10px;
+  background: linear-gradient(135deg, #0066b3, #003366); /* Gradiente de azul */
+  color: white;
+}
+
+.card-space {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: #ffcc00;
+  color: #2a3d66;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e6b800;
+}
+
+/* Estilo do Cartão do Super Bowl */
+.superbowl-card {
+  background-color: #2a3d66;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  width: 25%;
+}
+
+.superbowl-card:hover {
+  transform: scale(1.05);
+}
+
+.superbowl-image {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  border-radius: 10px;
+}
+
+/* Informações do Super Bowl */
+.superbowl-card p {
+  font-size: 18px;
+  margin: 10px 0;
+}

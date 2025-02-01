@@ -1,0 +1,19 @@
+<!-- src/app/teams/teams.component.html -->
+<div class="teams">
+  <h2>Times da NFL</h2>
+  <div class="teams-card">
+   <img class="teams-image" src="assets/images/nfl-teams.jpg" alt="NFL Teams">
+  </div>
+  <div class="team-list">
+    <div class="team" *ngFor="let team of teams">
+      <img [src]="team.logo" alt="{{ team.name }}" class="team-logo">
+      <h3>{{ team.name }}</h3>
+      <p>Estádio: {{ team.stadium }}</p>
+      <p>Capacidade: {{ team.capacity }} Pessoas</p>
+      <p>Super Bowls: {{ team.superBowls }}</p>
+      <p>Maiores Jogadores: {{team.famousPlayers.join(', ')}}</p>
+      
+      <a [href]="team.website" target="_blank" class="button">Visite o site</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+/* src/app/contact/contact.component.css */
+.contact {
+    padding: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #0066b3;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+  }
+  

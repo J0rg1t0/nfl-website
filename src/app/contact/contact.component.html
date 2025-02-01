@@ -1,0 +1,17 @@
+<!-- src/app/contact/contact.component.html -->
+<div class="contact">
+    <h2>Entre em Contato</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <label for="name">Nome:</label>
+      <input id="name" formControlName="name" type="text" required>
+      
+      <label for="email">E-mail:</label>
+      <input id="email" formControlName="email" type="email" required>
+      
+      <label for="message">Mensagem:</label>
+      <textarea id="message" formControlName="message" required></textarea>
+      
+      <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+    </form>
+  </div>
+  
