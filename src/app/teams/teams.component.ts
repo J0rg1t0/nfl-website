@@ -103,12 +103,12 @@ export class TeamsComponent {
       website: 'https://www.chiefs.com'
     },
     { 
-      name: 'Washington Football Team', 
+      name: 'Washington Commanders', 
       stadium: 'FedExField', 
       capacity: 82000,
       superBowls: 3,
       famousPlayers: ['Joe Theismann', 'John Riggins', 'Art Monk'],
-      logo: 'assets/images/washington.png',
+      logo: 'assets/images/commanders.png',
       website: 'https://www.washingtonfootball.com'
     },
     { 
