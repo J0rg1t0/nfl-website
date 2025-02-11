@@ -1,26 +1,31 @@
 import { Injectable } from '@nestjs/common';
 import { CreateNewsDto } from './dto/create-news.dto';
 import { UpdateNewsDto } from './dto/update-news.dto';
+import { News } from './entities/news.entity';
 
 @Injectable()
 export class NewsService {
-  create(createNewsDto: CreateNewsDto) {
-    return 'This action adds a new news';
+
+  async create(createNewsDto: CreateNewsDto) {
+    return await News.insert(createNewsDto);
   }
 
-  findAll() {
-    return `This action returns all news`;
+  async findAll() {
+    return await News.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} news`;
+  async findOne(id: number) {
+    return await News.findOne({
+      where: { id }
+    }
+    );
   }
 
-  update(id: number, updateNewsDto: UpdateNewsDto) {
-    return `This action updates a #${id} news`;
+  async update(id: number, updateNewsDto: UpdateNewsDto) {
+    return await News.update(id, updateNewsDto);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} news`;
+  async remove(id: number) {
+    return await News.delete(id);
   }
 }

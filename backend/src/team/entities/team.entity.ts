@@ -3,13 +3,20 @@ import {
     Entity, 
     Column, 
     PrimaryGeneratedColumn, 
-    CreateDateColumn 
+    CreateDateColumn,
+    JoinColumn,
+    OneToOne,
 } from 'typeorm';
+import { Stadium } from '../../stadium/entities/stadium.entity';
 
 @Entity()
 export class Team extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
+
+    @OneToOne(() => Stadium, stadium => stadium.id, { eager: true })
+    @JoinColumn({ name: 'idStadium' })
+    stadium: Stadium;
 
     @Column()
     name: string;

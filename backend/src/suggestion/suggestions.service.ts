@@ -1,26 +1,29 @@
 import { Injectable } from '@nestjs/common';
 import { CreateSuggestionDto } from './dto/create-suggestion.dto';
 import { UpdateSuggestionDto } from './dto/update-suggestion.dto';
+import { Suggestion } from './entities/suggestion.entity';
 
 @Injectable()
 export class SuggestionsService {
-  create(createSuggestionDto: CreateSuggestionDto) {
-    return 'This action adds a new suggestion';
+  async create(createSuggestionDto: CreateSuggestionDto) {
+    return await Suggestion.insert(createSuggestionDto);
   }
 
-  findAll() {
-    return `This action returns all suggestions`;
+  async findAll() {
+    return await Suggestion.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} suggestion`;
+  async findOne(id: number) {
+    return await Suggestion.findOne({
+      where: { id }
+      });
   }
 
-  update(id: number, updateSuggestionDto: UpdateSuggestionDto) {
-    return `This action updates a #${id} suggestion`;
+  async update(id: number, updateSuggestionDto: UpdateSuggestionDto) {
+    return await Suggestion.update(id, updateSuggestionDto);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} suggestion`;
+  async remove(id: number) {
+    return await Suggestion.delete(id);
   }
 }

@@ -1,26 +1,29 @@
 import { Injectable } from '@nestjs/common';
 import { CreateStadiumDto } from './dto/create-stadium.dto';
 import { UpdateStadiumDto } from './dto/update-stadium.dto';
+import { Stadium } from './entities/stadium.entity';
 
 @Injectable()
 export class StadiumService {
-  create(createStadiumDto: CreateStadiumDto) {
-    return 'This action adds a new stadium';
+  async create(createStadiumDto: CreateStadiumDto) {
+    return await Stadium.insert(createStadiumDto);
   }
 
-  findAll() {
-    return `This action returns all stadium`;
+  async findAll() {
+    return await Stadium.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} stadium`;
+  async findOne(id: number) {
+    return await Stadium.findOne({
+      where: { id }
+      });
   }
 
-  update(id: number, updateStadiumDto: UpdateStadiumDto) {
-    return `This action updates a #${id} stadium`;
+  async update(id: number, updateStadiumDto: UpdateStadiumDto) {
+    return await Stadium.update(id, updateStadiumDto);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} stadium`;
+  async remove(id: number) {
+    return await Stadium.delete(id);
   }
 }
