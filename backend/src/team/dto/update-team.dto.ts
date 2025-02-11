@@ -25,7 +25,7 @@ export class UpdateTeamDto extends PartialType(CreateTeamDto) {
 
     @IsNotEmpty()
     @IsArray()
-    legendaryPlayers: string[];
+    legendaryPlayers: string;
 
     @IsNotEmpty()
     @IsString()

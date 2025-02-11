@@ -33,8 +33,8 @@ export class Team extends BaseEntity {
     @Column()
     conferenceChampionships: number;
 
-    @Column()
-    legendaryPlayers: string[];
+    @Column('text')
+    legendaryPlayers: string;
 
     @Column()
     logo: string;

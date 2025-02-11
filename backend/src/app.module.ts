@@ -13,8 +13,10 @@ import { StadiumModule } from './stadium/stadium.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'db.sqlite',
-      entities: [],
+      database: 'db/db.sqlite',
+      entities: [
+        __dirname + '/**/*.entity{.ts,.js}',
+      ],
       synchronize: true,
     }),
     TeamsModule,

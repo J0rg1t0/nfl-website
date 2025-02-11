@@ -1,0 +1,211 @@
+{
+    "news": [
+        {
+          "title": "NFL 2025: Novos times, novos desafios!",
+          "link": "https://www.dazn.com/pt-BR/news/american-football/nfl-2025-free-agency-tres-principais-jogadores-ofensivos-e-os-times-que-precisam-deles/caumesvm5bm81pblvq39fxitk",
+          "content": "A temporada 2025 da NFL promete mudanças impactantes, com novos times e desafios inéditos.",
+          "image": "https://example.com/nfl-2025.jpg"
+        },
+        {
+          "title": "Quarterbacks de Elite: Quem são eles?",
+          "link": "https://www.espn.com.br/nfl/artigo/_/id/8939095/nfl-brady-mahomes-e-mais-quem-veja-o-top-10-de-quarterbacks-eleito-pela-propria-liga",
+          "content": "Descubra quais são os quarterbacks mais dominantes da NFL e suas trajetórias de sucesso.",
+          "image": "https://example.com/quarterbacks-elite.jpg"
+        },
+        {
+          "title": "Os 10 melhores jogos da temporada",
+          "link": "https://pt.linkedin.com/posts/lucasbonini_os-10-melhores-jogos-de-2024-da-nfl-activity-7202116955233751040-wWMY",
+          "content": "Uma retrospectiva dos jogos mais emocionantes da temporada da NFL e seus destaques.",
+          "image": "https://example.com/melhores-jogos.jpg"
+        },
+        {
+          "title": "Os favoritos para o Super Bowl LIX",
+          "link": "https://theplayoffs.news/noticias/palpites-nfl/melhores-palpites-para-o-super-bowl-lix-palpites-nfl/",
+          "content": "Confira os times que estão na disputa pelo título e suas chances no Super Bowl LIX.",
+          "image": "https://example.com/super-bowl-lix.jpg"
+        },
+        {
+          "title": "O futuro dos running backs na NFL",
+          "link": "https://medium.com/caradossports/arquivo-por-que-running-backs-s%C3%A3o-t%C3%A3o-desvalorizados-na-nfl-atualmente-fc5e0536a4a9",
+          "content": "Os running backs enfrentam novos desafios e mudanças estratégicas na NFL moderna.",
+          "image": "https://example.com/running-backs.jpg"
+        },
+        {
+          "title": "Como a tecnologia está mudando o futebol americano",
+          "link": "https://sportinsider.com.br/como-a-tecnologia-escalavel-esta-impulsionando-os-planos-globais-da-nfl/",
+          "content": "Avanços tecnológicos estão transformando a forma como a NFL é jogada e administrada.",
+          "image": "https://example.com/tecnologia-nfl.jpg"
+        },
+        {
+          "title": "Os melhores jogadores do Pro Bowl 2025",
+          "link": "https://theplayoffs.news/noticias/nfl/nfl-pro-bowl-2025-atualizacao-lista-jogadores/",
+          "content": "Uma lista com os principais atletas selecionados para o Pro Bowl 2025 e seus desempenhos.",
+          "image": "https://example.com/pro-bowl-2025.jpg"
+        },
+        {
+          "title": "As maiores rivalidades da NFL",
+          "link": "https://blog.betway.com/pt/outros-esportes/nfl-as-10-maiores-rivalidades-do-futebol-americano/",
+          "content": "Relembre as rivalidades mais intensas da história da NFL e seus confrontos inesquecíveis.",
+          "image": "https://example.com/rivalidades-nfl.jpg"
+        },
+        {
+          "title": "Os recordes mais impressionantes da temporada",
+          "link": "https://www.espn.com.br/nfl/artigo/_/id/14615203/recordes-quebrados-playoffs-encaminhados-destaques-da-semana-17-da-nfl",
+          "content": "Recordes históricos foram quebrados nesta temporada, trazendo novas marcas para a liga.",
+          "image": "https://example.com/recordes-nfl.jpg"
+        },
+        {
+          "title": "Os melhores calouros de 2025",
+          "link": "https://www.espn.com.br/nfl/artigo/_/id/14678730/quem-sao-futuras-estrelas-nfl-conheca-quarterback-mais-badalado-draft-2025",
+          "content": "Os rookies que mais se destacaram na temporada 2025 e suas perspectivas para o futuro.",
+          "image": "https://example.com/calouros-2025.jpg"
+        }
+      ],
+    
+    "teams": [
+        {
+          "name": "New England Patriots",
+          "stadium": 1,
+          "capacity": 65656,
+          "superBowls": 6,
+          "legendaryPlayers": ["Tom Brady", "Rob Gronkowski", "Tedy Bruschi"],
+          "logo": "assets/images/patriots.png",
+          "website": "https://www.patriots.com",
+          "city": "Foxborough, MA",
+          "conferenceChampionships": 11,
+          "headCoach": "Bill Belichick",
+          "owner": "Robert Kraft",
+          "quarterback": "Mac Jones"
+        },
+        {
+          "name": "Dallas Cowboys",
+          "stadium": 2,
+          "capacity": 80000,
+          "superBowls": 5,
+          "legendaryPlayers": ["Emmitt Smith", "Troy Aikman", "Michael Irvin"],
+          "logo": "assets/images/cowboys.png",
+          "website": "https://www.dallascowboys.com",
+          "city": "Arlington, TX",
+          "conferenceChampionships": 10,
+          "headCoach": "Mike McCarthy",
+          "owner": "Jerry Jones",
+          "quarterback": "Dak Prescott"
+        },
+        {
+          "name": "Green Bay Packers",
+          "stadium": 3,
+          "capacity": 81441,
+          "superBowls": 4,
+          "legendaryPlayers": ["Brett Favre", "Aaron Rodgers", "Reggie White"],
+          "logo": "assets/images/packers.png",
+          "website": "https://www.packers.com",
+          "city": "Green Bay, WI",
+          "conferenceChampionships": 9,
+          "headCoach": "Matt LaFleur",
+          "owner": "Publicly Owned",
+          "quarterback": "Jordan Love"
+        },
+        {
+          "name": "Pittsburgh Steelers",
+          "stadium": 4,
+          "capacity": 68400,
+          "superBowls": 6,
+          "legendaryPlayers": ["Terry Bradshaw", "Joe Greene", "Ben Roethlisberger"],
+          "logo": "assets/images/steelers.png",
+          "website": "https://www.steelers.com",
+          "city": "Pittsburgh, PA",
+          "conferenceChampionships": 8,
+          "headCoach": "Mike Tomlin",
+          "owner": "Rooney Family",
+          "quarterback": "Kenny Pickett"
+        },
+        {
+          "name": "San Francisco 49ers",
+          "stadium": 5,
+          "capacity": 68500,
+          "superBowls": 5,
+          "legendaryPlayers": ["Joe Montana", "Jerry Rice", "Steve Young"],
+          "logo": "assets/images/49ers.png",
+          "website": "https://www.49ers.com",
+          "city": "Santa Clara, CA",
+          "conferenceChampionships": 8,
+          "headCoach": "Kyle Shanahan",
+          "owner": "Denise DeBartolo York & John York",
+          "quarterback": "Brock Purdy"
+        },
+        {
+          "name": "Kansas City Chiefs",
+          "stadium": 6,
+          "capacity": 76416,
+          "superBowls": 2,
+          "legendaryPlayers": ["Len Dawson", "Derrick Thomas", "Tony Gonzalez"],
+          "logo": "assets/images/chiefs.png",
+          "website": "https://www.chiefs.com",
+          "city": "Kansas City, MO",
+          "conferenceChampionships": 4,
+          "headCoach": "Andy Reid",
+          "owner": "Clark Hunt",
+          "quarterback": "Patrick Mahomes"
+        },
+        {
+          "name": "Tampa Bay Buccaneers",
+          "stadium": 7,
+          "capacity": 65618,
+          "superBowls": 2,
+          "legendaryPlayers": ["Derrick Brooks", "Warren Sapp", "Ronde Barber"],
+          "logo": "assets/images/buccaneers.png",
+          "website": "https://www.buccaneers.com",
+          "city": "Tampa, FL",
+          "conferenceChampionships": 2,
+          "headCoach": "Bruce Arians",
+          "owner": "Glazer Family",
+          "quarterback": "Tom Brady"
+        },
+        {
+          "name": "Seattle Seahawks",
+          "stadium": 8,
+          "capacity": 68500,
+          "superBowls": 1,
+          "legendaryPlayers": ["Steve Largent", "Cortez Kennedy", "Walter Jones"],
+          "logo": "assets/images/seahawks.png",
+          "website": "https://www.seahawks.com",
+          "city": "Seattle, WA",
+          "conferenceChampionships": 3,
+          "headCoach": "Pete Carroll",
+          "owner": "Paul Allen Trust",
+          "quarterback": "Russell Wilson"
+        },
+        {
+          "name": "Denver Broncos",
+          "stadium": 9,
+          "capacity": 76125,
+          "superBowls": 3,
+          "legendaryPlayers": ["John Elway", "Terrell Davis", "Champ Bailey"],
+          "logo": "assets/images/broncos.png",
+          "website": "https://www.denverbroncos.com",
+          "city": "Denver, CO",
+          "conferenceChampionships": 8,
+          "headCoach": "Nathaniel Hackett",
+          "owner": "Pat Bowlen Trust",
+          "quarterback": "Drew Lock"
+        },
+        {
+          "name": "Las Vegas Raiders",
+          "stadium": 10,
+          "capacity": 65000,
+          "superBowls": 3,
+          "legendaryPlayers": ["Jim Plunkett", "Marcus Allen", "Howie Long"],
+          "logo": "assets/images/raiders.png",
+          "website": "https://www.raiders.com",
+          "city": "Las Vegas, NV",
+          "conferenceChampionships": 4,
+          "headCoach": "Josh McDaniels",
+          "owner": "Mark Davis",
+          "quarterback": "Derek Carr"
+        }
+      ]
+      
+
+    
+      
+}

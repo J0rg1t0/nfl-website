@@ -25,7 +25,7 @@ export class CreateTeamDto {
 
     @IsNotEmpty()
     @IsArray()
-    legendaryPlayers: string[];
+    legendaryPlayers: string;
 
     @IsNotEmpty()
     @IsString()
