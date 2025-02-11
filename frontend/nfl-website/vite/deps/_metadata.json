@@ -1,0 +1,82 @@
+{
+  "hash": "92d6169b",
+  "configHash": "72756844",
+  "lockfileHash": "4f35fc14",
+  "browserHash": "b7dd7ea3",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "dea8a9d8",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "b6e68405",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "b9474064",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "6794200a",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "203ec13b",
+      "needsInterop": false
+    },
+    "ngx-bootstrap/carousel": {
+      "src": "../../../../../../node_modules/ngx-bootstrap/carousel/fesm2022/ngx-bootstrap-carousel.mjs",
+      "file": "ngx-bootstrap_carousel.js",
+      "fileHash": "f01caa22",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations/async": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
+      "file": "@angular_platform-browser_animations_async.js",
+      "fileHash": "07de46e2",
+      "needsInterop": false
+    },
+    "@angular/material/snack-bar": {
+      "src": "../../../../../../node_modules/@angular/material/fesm2022/snack-bar.mjs",
+      "file": "@angular_material_snack-bar.js",
+      "fileHash": "14f1a08c",
+      "needsInterop": false
+    },
+    "@angular/cdk/bidi": {
+      "src": "../../../../../../node_modules/@angular/cdk/fesm2022/bidi.mjs",
+      "file": "@angular_cdk_bidi.js",
+      "fileHash": "c0f3d3b3",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "browser-YRRSEA4Q": {
+      "file": "browser-YRRSEA4Q.js"
+    },
+    "chunk-V5RKGDQO": {
+      "file": "chunk-V5RKGDQO.js"
+    },
+    "chunk-TAUF26J3": {
+      "file": "chunk-TAUF26J3.js"
+    },
+    "chunk-MQEUQ7L7": {
+      "file": "chunk-MQEUQ7L7.js"
+    },
+    "chunk-5T6PUFOX": {
+      "file": "chunk-5T6PUFOX.js"
+    },
+    "chunk-6NEFXTJH": {
+      "file": "chunk-6NEFXTJH.js"
+    }
+  }
+}

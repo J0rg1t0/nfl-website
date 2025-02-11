@@ -1,0 +1,19 @@
+<div class="home">
+  <h1>Bem-vindo ao melhor blog de notícias da NFL no Brasil!</h1>
+  <p>Encontre informações sobre os times da NFL, seus estádios e muito mais!</p>
+  <div class="card-space">
+
+    <div class="superbowl-card">
+      <h2>Super Bowl 2025</h2>
+      <img src="assets/images/superbowl.jpg" alt="Super Bowl 2025" class="superbowl-image">
+      <p><strong>Data:</strong> {{ superBowl.date }}</p>
+      <p><strong>Hora:</strong> {{ superBowl.time }}</p>
+      <p><strong>Estádio:</strong> {{ superBowl.stadium }}</p>
+      <p><strong>Times:</strong> {{ superBowl.teams[0] }} vs {{ superBowl.teams[1] }}</p>
+      <p><strong>Jogadores principais:</strong> {{ superBowl.players.join(', ') }}</p>
+      <p><strong>Transmissão no Brasil:</strong> {{ superBowl.broadcast.join(', ') }}</p>
+      <a (click)="onNavigate('superbowl')" class="button">Mais Informações</a>
+    </div>
+  </div>
+  
+</div>
