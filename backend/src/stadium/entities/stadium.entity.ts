@@ -34,7 +34,4 @@ export class Stadium extends BaseEntity {
 
     @Column()
     stadiumType: string;
-
-    @CreateDateColumn()
-    created_at: Date;
 }

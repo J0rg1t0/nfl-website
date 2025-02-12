@@ -10,7 +10,8 @@ export class TeamsService {
   }
 
   async findAll() {
-    return await Team.find();
+    const values = await Team.find();
+    return values;
   }
 
   async findOne(id: number) {

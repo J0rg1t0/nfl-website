@@ -8,10 +8,10 @@
     <div class="team" *ngFor="let team of teams">
       <img [src]="team.logo" alt="{{ team.name }}" class="team-logo">
       <h3>{{ team.name }}</h3>
-      <p>Estádio: {{ team.stadium }}</p>
+      <p>Estádio: {{ team.idStadium }}</p>
       <p>Capacidade: {{ team.capacity }} Pessoas</p>
       <p>Super Bowls: {{ team.superBowls }}</p>
-      <p>Maiores Jogadores: {{team.famousPlayers.join(', ')}}</p>
+      <p>Maiores Jogadores: {{team.legendaryPlayers}}</p>
       
       <a [href]="team.website" target="_blank" class="button">Visite o site</a>
     </div>

@@ -9,6 +9,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HistoryComponent } from './history/history.component';
 import { NewsComponent } from './news/news.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +25,11 @@ export const routes: Routes = [
     ReactiveFormsModule,
     CarouselModule.forRoot(),
     MatSnackBarModule,
+    HttpClientModule,
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    provideHttpClient(),
+  ],
 })
 export class AppModule {}

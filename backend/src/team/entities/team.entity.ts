@@ -50,7 +50,4 @@ export class Team extends BaseEntity {
 
     @Column()
     website: string;
-
-    @CreateDateColumn()
-    created_at: Date;
 }
