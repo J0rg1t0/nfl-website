@@ -1,0 +1,31 @@
+<div class="stadiums-container">
+    <div class="stadium-card" *ngFor="let stadium of stadiums">
+      <div class="image-container">
+        <img
+          [src]="stadium.image"
+          [class.active]="currentImageIndex[stadium.name] === 0"
+          alt="{{ stadium.name }}"
+        />
+        <img
+          [src]="stadium.image2"
+          [class.active]="currentImageIndex[stadium.name] === 1"
+          alt="{{ stadium.name }}"
+        />
+        <img
+          [src]="stadium.image3"
+          [class.active]="currentImageIndex[stadium.name] === 2"
+          alt="{{ stadium.name }}"
+        />
+      </div>
+      <div class="stadium-info">
+        <h3>{{ stadium.name }}</h3>
+        <p><strong>Cidade:</strong> {{ stadium.city }}, {{ stadium.state }}</p>
+        <p><strong>Capacidade:</strong> {{ stadium.capacity | number }}</p>
+        <p><strong>Inauguração:</strong> {{ stadium.inaugurationDate | date:"dd/MM/yyyy" }}</p>
+        <p><strong>Tipo de Gramado:</strong> {{ stadium.playingSurface }}</p>
+        <p><strong>Tipo do Teto:</strong> {{ stadium.roofType }}</p>
+        <p><strong>Tipo da Arena:</strong> {{ stadium.stadiumType }}</p>
+      </div>
+    </div>
+  </div>
+  

@@ -23,6 +23,6 @@ export class News extends BaseEntity {
     @Column()
     link: string;
 
-    @CreateDateColumn()
-    created_at: Date;
+    @Column()
+    date: string;
 }

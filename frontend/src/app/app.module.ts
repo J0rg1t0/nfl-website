@@ -10,6 +10,7 @@ import { HistoryComponent } from './history/history.component';
 import { NewsComponent } from './news/news.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { StadiumComponent } from './stadium/stadium.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'history', component: HistoryComponent },
   { path: 'news', component: NewsComponent },
+  { path: 'stadium', component: StadiumComponent },
 ];
 
 @NgModule({

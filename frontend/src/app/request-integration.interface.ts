@@ -24,7 +24,9 @@ export interface Stadium {
     playingSurface: string;
     roofType: string;
     stadiumType: string;
-    created_at: Date;
+    image: string;
+    image2: string;
+    image3: string;
 }
 
 export interface News {
@@ -32,8 +34,8 @@ export interface News {
     title: string;
     content: string;
     image: string;
-    link: Date;
-    created_at: Date;
+    link: string;
+    date: string;
 }
 
 export interface Suggestions {

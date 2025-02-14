@@ -10,7 +10,7 @@ export class RequestIntegrationService {
     constructor(
         private http: HttpClient
     ) {}
-    private urlBackendApi = 'http://localhost:3000';
+    private urlBackendApi = '/api';
     private urlTeams = `${this.urlBackendApi}/teams`;
     private urlNews = `${this.urlBackendApi}/news`;
     private urlSuggestions = `${this.urlBackendApi}/suggestions`;
@@ -19,7 +19,6 @@ export class RequestIntegrationService {
 
     async getTeams() {
         return await lastValueFrom(this.http.get<Team[]>(this.urlTeams)).then(teams => teams ?? []);
-
     }
 
     async getNews() {

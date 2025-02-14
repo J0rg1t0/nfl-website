@@ -33,4 +33,16 @@ export class CreateStadiumDto {
     @IsNotEmpty()
     @IsString()
     stadiumType: string;
+
+    @IsNotEmpty()
+    @IsString()
+    image: string;
+
+    @IsNotEmpty()
+    @IsString()
+    image2: string;
+
+    @IsNotEmpty()
+    @IsString()
+    image3: string;
 }

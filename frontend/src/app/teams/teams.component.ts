@@ -20,6 +20,5 @@ export class TeamsComponent {
   
   async ngOnInit() {
     this.teams = await this.requestIntegrationService.getTeams();
-    console.log(this.teams);
   }
 }

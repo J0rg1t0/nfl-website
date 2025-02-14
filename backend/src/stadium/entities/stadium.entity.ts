@@ -34,4 +34,13 @@ export class Stadium extends BaseEntity {
 
     @Column()
     stadiumType: string;
+
+    @Column()
+    image: string;
+
+    @Column()
+    image2: string;
+
+    @Column()
+    image3: string;
 }
