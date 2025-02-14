@@ -1,15 +1,19 @@
+import { Team } from 'src/team/entities/team.entity';
 import { 
     BaseEntity, 
     Entity, 
     Column, 
-    PrimaryGeneratedColumn, 
-    CreateDateColumn 
+    PrimaryGeneratedColumn,
+    OneToMany,
 } from 'typeorm';
 
 @Entity()
 export class Stadium extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
+
+    @OneToMany(() => Team, team => team.stadium)
+    teams: Team[];
 
     @Column()
     name: string;

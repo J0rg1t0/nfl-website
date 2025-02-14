@@ -21,6 +21,7 @@ export class StadiumComponent {
 
   async ngOnInit() {
     this.stadiums = await this.requestIntegrationService.getStadiums();
+    console.log(this.stadiums);
     this.stadiums.forEach((stadium) => {
       this.currentImageIndex[stadium.name] = 0;
       setInterval(() => this.cycleImages(stadium.name), 3000);

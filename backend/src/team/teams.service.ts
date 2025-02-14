@@ -10,8 +10,9 @@ export class TeamsService {
   }
 
   async findAll() {
-    const values = await Team.find();
-    return values;
+    return await Team.find({
+      relations: ['stadium'],
+    });
   }
 
   async findOne(id: number) {

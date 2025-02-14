@@ -12,6 +12,7 @@ export interface Team {
     owner: string;
     quarterback: string;
     website: string;
+    stadium: Stadium;
 }
 
 export interface Stadium {
@@ -27,6 +28,7 @@ export interface Stadium {
     image: string;
     image2: string;
     image3: string;
+    teams: Team[];
 }
 
 export interface News {

@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner } from "typeorm";
+import { MigrationInterface, QueryRunner, Table, TableForeignKey } from "typeorm";
 import * as fs from 'fs';
 
 export class InsertInitialData1739306235869 implements MigrationInterface {
@@ -7,19 +7,202 @@ export class InsertInitialData1739306235869 implements MigrationInterface {
         const data = fs.readFileSync('src/migrations/initial-data.json');
         const parsedData = JSON.parse(data.toString());
 
-        await queryRunner.query(`CREATE TABLE stadium (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, city TEXT NOT NULL, state TEXT NOT NULL, capacity INTEGER NOT NULL, inaugurationDate TEXT NOT NULL, playingSurface TEXT NOT NULL, roofType TEXT NOT NULL, stadiumType TEXT NOT NULL, image TEXT NOT NULL, image2 TEXT NOT NULL, image3 TEXT NOT NULL)`);
-        await queryRunner.query(`CREATE TABLE team (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, idStadium INTEGER NOT NULL, city TEXT NOT NULL, superBowls INTEGER NOT NULL, conferenceChampionships INTEGER NOT NULL, legendaryPlayers TEXT NOT NULL, logo TEXT NOT NULL, headCoach TEXT NOT NULL, owner TEXT NOT NULL, quarterback TEXT NOT NULL, website TEXT NOT NULL)`);
-        await queryRunner.query(`CREATE TABLE news (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, content TEXT NOT NULL, image TEXT NOT NULL, link TEXT NOT NULL, date TEXT NOT NULL)`);
+        await queryRunner.createTable(
+            new Table({
+                name: 'stadium',
+                columns: [
+                    {
+                        name: 'id',
+                        type: 'INTEGER',
+                        isPrimary: true,
+                        isGenerated: true,
+                        generationStrategy: 'increment'
+                    },
+                    {
+                        name: 'name',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'city',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'state',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'capacity',
+                        type: 'INTEGER',
+                        isNullable: false
+                    },
+                    {
+                        name: 'inaugurationDate',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'playingSurface',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'roofType',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'stadiumType',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'image',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'image2',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'image3',
+                        type: 'TEXT',
+                        isNullable: false
+                    }
+                ]
+            })
+        )
 
-        for (const stadium of parsedData.stadium) {
-            await queryRunner.query(`INSERT INTO stadium (name, city, state, capacity, inaugurationDate, playingSurface, roofType, stadiumType, image, image2, image3) VALUES ('${stadium.name}', '${stadium.city}', '${stadium.state}', ${stadium.capacity}, '${stadium.inaugurationDate}', '${stadium.playingSurface}', '${stadium.roofType}', '${stadium.stadiumType}', '${stadium.image}', '${stadium.image2}', '${stadium.image3}')`);
-        }
-        for (const team of parsedData.team) {
-            await queryRunner.query(`INSERT INTO team (name, idStadium, city, superBowls, conferenceChampionships, legendaryPlayers, logo, headCoach, owner, quarterback, website) VALUES ('${team.name}', ${team.idStadium}, '${team.city}', ${team.superBowls}, ${team.conferenceChampionships}, '${team.legendaryPlayers.join(', ')}', '${team.logo}', '${team.headCoach}', '${team.owner}', '${team.quarterback}', '${team.website}')`);
-        }
-        for (const news of parsedData.news) {
-            await queryRunner.query(`INSERT INTO news (title, content, image, link, date) VALUES ('${news.title}', '${news.content}', '${news.image}', '${news.link}', '${news.date}')`);
-        }
+        await queryRunner.createTable(
+            new Table({
+                name: 'team',
+                columns: [
+                    {
+                        name: 'id',
+                        type: 'INTEGER',
+                        isPrimary: true,
+                        isGenerated: true,
+                        generationStrategy: 'increment'
+                    },
+                    {
+                        name: 'name',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'idStadium',
+                        type: 'INTEGER',
+                        isNullable: false
+                    },
+                    {
+                        name: 'city',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'superBowls',
+                        type: 'INTEGER',
+                        isNullable: false
+                    },
+                    {
+                        name: 'conferenceChampionships',
+                        type: 'INTEGER',
+                        isNullable: false
+                    },
+                    {
+                        name: 'legendaryPlayers',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'logo',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'headCoach',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'owner',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'quarterback',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'website',
+                        type: 'TEXT',
+                        isNullable: false
+                    }
+                ]
+            })
+        )
+
+        await queryRunner.createTable(
+            new Table({
+                name: 'news',
+                columns: [
+                    {
+                        name: 'id',
+                        type: 'INTEGER',
+                        isPrimary: true,
+                        isGenerated: true,
+                        generationStrategy: 'increment'
+                    },
+                    {
+                        name: 'title',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'content',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'image',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'link',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'date',
+                        type: 'TEXT',
+                        isNullable: false
+                    }
+                ]
+            })
+        )
+
+        await queryRunner.createForeignKey('team', new TableForeignKey({
+            columnNames: ['idStadium'],
+            referencedColumnNames: ['id'],
+            referencedTableName: 'stadium',
+            onDelete: 'RESTRICT',
+            onUpdate: "RESTRICT",
+        }));
+
+        parsedData.team.forEach(team => {
+            team.legendaryPlayers = team.legendaryPlayers.join(', ')
+        });
+
+        await queryRunner.manager.insert('stadium', parsedData.stadium);
+        await queryRunner.manager.insert('team', parsedData.team);
+        await queryRunner.manager.insert('news', parsedData.news);
+
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {

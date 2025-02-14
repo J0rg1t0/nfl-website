@@ -3,22 +3,37 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
+import { Team } from '../request-integration.interface';
+import { RequestIntegrationService } from '../request-integration.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, RouterModule, MatSnackBarModule],
+  imports: [ReactiveFormsModule, RouterModule, MatSnackBarModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
   contactForm: FormGroup;
+  teams: Team[] = [];
 
-  constructor(private fb: FormBuilder, private snackBar: MatSnackBar) {
+  constructor(private fb: FormBuilder, 
+    private snackBar: MatSnackBar,
+    private requestIntegrationService: RequestIntegrationService) 
+    {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
+      age: ['', Validators.required],
+      team: ['', Validators.required],
+      phone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      subject: ['', Validators.required],
       message: ['', Validators.required]
     });
+  }
+
+  async ngOnInit() {
+    this.teams = await this.requestIntegrationService.getTeams();
   }
 
   onSubmit() {

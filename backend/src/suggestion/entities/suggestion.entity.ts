@@ -15,7 +15,19 @@ export class Suggestion extends BaseEntity {
     name: string;
 
     @Column()
+    age: number;
+
+    @Column()
+    phone: string;
+    
+    @Column()
     email: string;
+
+    @Column()
+    idTeam: number;
+
+    @Column()
+    subject: string;
 
     @Column()
     suggestion: string;

@@ -2,10 +2,10 @@ import {
     BaseEntity, 
     Entity, 
     Column, 
-    PrimaryGeneratedColumn, 
-    CreateDateColumn,
+    PrimaryGeneratedColumn,
     JoinColumn,
     OneToOne,
+    ManyToOne,
 } from 'typeorm';
 import { Stadium } from '../../stadium/entities/stadium.entity';
 
@@ -14,7 +14,11 @@ export class Team extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @OneToOne(() => Stadium, stadium => stadium.id, { eager: true })
+    // @OneToOne(() => Stadium, stadium => stadium.id)
+    // @JoinColumn({ name: 'idStadium' })
+    // stadium: Stadium;
+
+    @ManyToOne(() => Stadium, stadium => stadium.teams)
     @JoinColumn({ name: 'idStadium' })
     stadium: Stadium;
 

@@ -481,7 +481,7 @@
             },
             {
               "name": "New York Jets",
-              "idStadium": 30,
+              "idStadium": 6,
               "capacity": 82500,
               "superBowls": 1,
               "legendaryPlayers": ["Joe Namath", "Curtis Martin", "Darrelle Revis"],
@@ -495,7 +495,7 @@
             },
             {
               "name": "Los Angeles Chargers",
-              "idStadium": 31,
+              "idStadium": 13,
               "capacity": 70240,
               "superBowls": 0,
               "legendaryPlayers": ["LaDainian Tomlinson", "Philip Rivers", "Antonio Gates"],
@@ -509,7 +509,7 @@
             },
             {
               "name": "Baltimore Ravens",
-              "idStadium": 32,
+              "idStadium": 30,
               "capacity": 71008,
               "superBowls": 2,
               "legendaryPlayers": ["Ray Lewis", "Ed Reed", "Jonathan Ogden"],
@@ -523,7 +523,8 @@
             }
       ],
       "stadium": [
-        {
+        { 
+          "id": 1,
           "name": "Gillette Stadium",
           "image": "assets/images/gillette_stadium.jpeg",
           "image2": "assets/images/gillette_stadium2.jpeg",
@@ -537,6 +538,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 2,
           "name": "AT&T Stadium",
           "image": "assets/images/at&t_stadium.jpeg",
           "image2": "assets/images/at&t_stadium2.jpeg",
@@ -550,6 +552,7 @@
           "stadiumType": "Teto retrátil"
         },
         {
+          "id": 3,
           "name": "Lambeau Field",
           "image": "assets/images/lambeau_field.jpeg",
           "image2": "assets/images/lambeau_field2.jpeg",
@@ -563,6 +566,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 4,
           "name": "Heinz Field",
           "image": "assets/images/acrisure_stadium.jpeg",
           "image2": "assets/images/acrisure_stadium2.jpeg",
@@ -576,6 +580,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 5,
           "name": "Levis Stadium",
           "image": "assets/images/levis_stadium.jpeg",
           "image2": "assets/images/levis_stadium2.jpeg",
@@ -589,6 +594,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 6,
           "name": "MetLife Stadium",
           "image": "assets/images/metlife_stadium.jpeg",
           "image2": "assets/images/metlife_stadium2.jpeg",
@@ -602,6 +608,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 7,
           "name": "Empower Field at Mile High",
           "image": "assets/images/empower_field_at_mile_high.jpeg",
           "image2": "assets/images/empower_field_at_mile_high2.jpeg",
@@ -615,6 +622,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 8,
           "name": "Soldier Field",
           "image": "assets/images/soldier_field.jpeg",
           "image2": "assets/images/soldier_field2.jpeg",
@@ -628,6 +636,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 9,
           "name": "Arrowhead Stadium",
           "image": "assets/images/arrowhead_stadium.jpeg",
           "image2": "assets/images/arrowhead_stadium2.jpeg",
@@ -641,6 +650,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 10,
           "name": "FedExField",
           "image": "assets/images/fedex_field.jpeg",
           "image2": "assets/images/fedex_field2.jpeg",
@@ -654,6 +664,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 11,
           "name": "Hard Rock Stadium",
           "image": "assets/images/hard_rock_stadium.jpeg",
           "image2": "assets/images/hard_rock_stadium2.jpeg",
@@ -667,6 +678,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 12,
           "name": "Lumen Field",
           "image": "assets/images/lumen_field.jpeg",
           "image2": "assets/images/lumen_field2.jpeg",
@@ -680,6 +692,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 13,
           "name": "SoFi Stadium",
           "image": "assets/images/sofi_stadium.jpeg",
           "image2": "assets/images/sofi_stadium2.jpeg",
@@ -693,6 +706,7 @@
           "stadiumType": "Arena fechada"
         },
         {
+          "id": 14,
           "name": "U.S. Bank Stadium",
           "image": "assets/images/us_bank_stadium.jpeg",
           "image2": "assets/images/us_bank_stadium2.jpeg",
@@ -706,6 +720,7 @@
           "stadiumType": "Arena fechada"
         },
         {
+          "id": 15,
           "name": "Lucas Oil Stadium",
           "image": "assets/images/lucas_oil_stadium.jpeg",
           "image2": "assets/images/lucas_oil_stadium2.jpeg",
@@ -719,6 +734,7 @@
           "stadiumType": "Teto retrátil"
         },
         {
+          "id": 16,
           "name": "Raymond James Stadium",
           "image": "assets/images/raymond_james_stadium.jpeg",
           "image2": "assets/images/raymond_james_stadium2.jpeg",
@@ -732,6 +748,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 17,
           "name": "Lincoln Financial Field",
           "image": "assets/images/lincoln_financial_field.jpeg",
           "image2": "assets/images/lincoln_financial_field2.jpeg",
@@ -745,6 +762,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 18,
           "name": "Caesars Superdome",
           "image": "assets/images/caesars_superdome.jpeg",
           "image2": "assets/images/caesars_superdome2.jpeg",
@@ -758,6 +776,7 @@
           "stadiumType": "Arena fechada"
         },
         {
+          "id": 19,
           "name": "FirstEnergy Stadium",
           "image": "assets/images/first_energy_stadium.jpeg",
           "image2": "assets/images/first_energy_stadium2.jpeg",
@@ -771,6 +790,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 20,
           "name": "Highmark Stadium",
           "image": "assets/images/highmark_stadium.jpeg",
           "image2": "assets/images/highmark_stadium2.jpeg",
@@ -784,6 +804,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 21,
           "name": "State Farm Stadium",
           "image": "assets/images/state_farm_stadium.jpeg",
           "image2": "assets/images/state_farm_stadium2.jpeg",
@@ -797,6 +818,7 @@
           "stadiumType": "Teto retrátil"
         },
         {
+          "id": 22,
           "name": "Allegiant Stadium",
           "image": "assets/images/allegiant_stadium.jpeg",
           "image2": "assets/images/allegiant_stadium2.jpeg",
@@ -810,6 +832,7 @@
           "stadiumType": "Arena fechada"
         },
         {
+          "id": 23,
           "name": "Ford Field",
           "image": "assets/images/ford_field.jpeg",
           "image2": "assets/images/ford_field2.jpeg",
@@ -823,6 +846,7 @@
           "stadiumType": "Arena fechada"
         },
         {
+          "id": 24,
           "name": "Mercedes-Benz Stadium",
           "image": "assets/images/mercedes_benz_stadium.jpeg",
           "image2": "assets/images/mercedes_benz_stadium2.jpeg",
@@ -836,6 +860,7 @@
           "stadiumType": "Teto retrátil"
         },
         {
+          "id": 25,
           "name": "Bank of America Stadium",
           "image": "assets/images/bank_of_america_stadium.jpeg",
           "image2": "assets/images/bank_of_america_stadium2.jpeg",
@@ -849,6 +874,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 26,
           "name": "Paycor Stadium",
           "image": "assets/images/paycor_stadium.jpeg",
           "image2": "assets/images/paycor_stadium2.jpeg",
@@ -862,6 +888,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 27,
           "name": "TIAA Bank Field",
           "image": "assets/images/tiaa_bank_field.jpeg",
           "image2": "assets/images/tiaa_bank_field2.jpeg",
@@ -875,6 +902,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 28,
           "name": "NRG Stadium",
           "image": "assets/images/nrg_stadium.jpeg",
           "image2": "assets/images/nrg_stadium2.jpeg",
@@ -888,6 +916,7 @@
           "stadiumType": "Teto retrátil"
         },
         {
+          "id": 29,
           "name": "Nissan Stadium",
           "image": "assets/images/nissan_stadium.jpeg",
           "image2": "assets/images/nissan_stadium2.jpeg",
@@ -901,6 +930,7 @@
           "stadiumType": "Arena aberta"
         },
         {
+          "id": 30,
           "name": "M&T Bank Stadium",
           "image": "assets/images/m&t_bank_stadium.jpeg",
           "image2": "assets/images/m&t_bank_stadium2.jpeg",

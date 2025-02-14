@@ -1,12 +1,29 @@
 <!-- src/app/contact/contact.component.html -->
 <div class="contact">
-    <h2>Entre em Contato</h2>
+    <h2>Entre em Contato Conosco!</h2>
+    <h3>Mande sua dúvida, sugestão ou pedido diretamente para a nossa equipe!</h3>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  
       <label for="name">Nome:</label>
       <input id="name" formControlName="name" type="text" required>
+
+      <label for="age">Idade:</label>
+      <input id="age" formControlName="age" type="number" required>
+
+      <label for="phone">Telefone:</label>
+      <input id="phone" formControlName="phone" type="tel" required>
       
       <label for="email">E-mail:</label>
       <input id="email" formControlName="email" type="email" required>
+
+      <label for="team">Para qual time você torce?</label>
+      <select class="select-team" id="team" formControlName="team" required>
+        <option value="">Selecione um time</option>
+        <option *ngFor="let team of teams" [value]="team.name">{{ team.name }}</option>
+      </select>
+
+      <label for="subject">Assunto:</label>
+      <input id="subject" formControlName="subject" type="text" required>
       
       <label for="message">Mensagem:</label>
       <textarea id="message" formControlName="message" required></textarea>

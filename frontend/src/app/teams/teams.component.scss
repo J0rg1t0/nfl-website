@@ -78,14 +78,14 @@ h2 {
   margin-bottom: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
-  width: 25%;
+  width: 100%;
   display: flex;
 }
 
 .teams-image {
-  width: 300px;
-  height: auto;
-  object-fit: cover;
+  width: 1400px;
+  height: 200px;
+  object-fit: fill;
   margin: 0 auto 15px;
   border-radius: 10px;
 }

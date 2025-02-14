@@ -7,8 +7,24 @@ export class CreateSuggestionDto {
     name: string;
 
     @IsNotEmpty()
+    @IsNumber()
+    age: number;
+
+    @IsNotEmpty()
+    @IsString()
+    phone: string;
+
+    @IsNotEmpty()
     @IsString()
     email: string;
+
+    @IsNotEmpty()
+    @IsNumber()
+    idTeam: number;
+
+    @IsNotEmpty()
+    @IsString()
+    subject: string;
 
     @IsNotEmpty()
     @IsString()

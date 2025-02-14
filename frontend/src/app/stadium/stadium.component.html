@@ -25,6 +25,17 @@
         <p><strong>Tipo de Gramado:</strong> {{ stadium.playingSurface }}</p>
         <p><strong>Tipo do Teto:</strong> {{ stadium.roofType }}</p>
         <p><strong>Tipo da Arena:</strong> {{ stadium.stadiumType }}</p>
+        <div *ngIf="stadium.teams">
+          <p><strong>Time(s):</strong></p>
+            <ul class="team-logo">
+              <li *ngFor="let team of stadium.teams">
+                <img
+                  [src]="team.logo" 
+                  alt="{{ team.name }}" />
+                  <p><strong>{{ team.name }}</strong></p>
+              </li>
+            </ul>
+        </div>
       </div>
     </div>
   </div>

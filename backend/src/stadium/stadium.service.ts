@@ -10,12 +10,15 @@ export class StadiumService {
   }
 
   async findAll() {
-    return await Stadium.find();
+    return await Stadium.find({
+      relations: ['teams'],
+    });
   }
 
   async findOne(id: number) {
     return await Stadium.findOne({
-      where: { id }
+      where: { id },
+      relations: ['teams'],
       });
   }
 
