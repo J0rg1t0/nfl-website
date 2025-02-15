@@ -15,6 +15,13 @@ lerna-debug.log*
 # OS
 .DS_Store
 
+# Sqlite
+*.sqlite
+*.sqlite3
+
+#Package lock
+package-lock.json
+
 # Tests
 /coverage
 /.nyc_output

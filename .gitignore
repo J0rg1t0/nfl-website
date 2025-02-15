@@ -35,6 +35,11 @@ backend/db/
 /coverage
 /.nyc_output
 
+#Package lock
+*package-lock.json
+backend/package-lock.json
+frontend/package-lock.json
+
 # IDEs and editors
 /.idea
 .project
