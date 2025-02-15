@@ -17,18 +17,18 @@
       <input id="email" formControlName="email" type="email" required>
 
       <label for="team">Para qual time você torce?</label>
-      <select class="select-team" id="team" formControlName="team" required>
+      <select class="select-team" id="idTeam" formControlName="idTeam" required>
         <option value="">Selecione um time</option>
-        <option *ngFor="let team of teams" [value]="team.name">{{ team.name }}</option>
+        <option *ngFor="let team of teams" [value]="team.id">{{ team.name }}</option>
       </select>
 
       <label for="subject">Assunto:</label>
       <input id="subject" formControlName="subject" type="text" required>
       
-      <label for="message">Mensagem:</label>
-      <textarea id="message" formControlName="message" required></textarea>
+      <label for="suggestion">Mensagem:</label>
+      <textarea id="suggestion" formControlName="suggestion" required></textarea>
       
-      <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+      <button type="submit" [disabled]="contactForm.invalid || disableButton">Enviar</button>
     </form>
   </div>
   

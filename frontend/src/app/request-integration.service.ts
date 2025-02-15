@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { lastValueFrom } from "rxjs";
+import { firstValueFrom, lastValueFrom } from "rxjs";
 import { News, Stadium, Suggestions, Team } from "./request-integration.interface";
 
 @Injectable({
@@ -41,8 +41,14 @@ export class RequestIntegrationService {
         return await this.http.post(this.urlNews, news);
     }
 
-    async postSuggestion(suggestion: any) {
-        return await this.http.post(this.urlSuggestions, suggestion);
+    async postSuggestion(suggestion: Suggestions) {
+        try {
+            return await firstValueFrom(this.http.post(this.urlSuggestions, suggestion));
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
+
     }
 
     async postMail(mail: any) {

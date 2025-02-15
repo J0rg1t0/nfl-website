@@ -187,10 +187,74 @@ export class InsertInitialData1739306235869 implements MigrationInterface {
             })
         )
 
+        await queryRunner.createTable(
+            new Table({
+                name: 'suggestion',
+                columns: [
+                    {
+                        name: 'id',
+                        type: 'INTEGER',
+                        isPrimary: true,
+                        isGenerated: true,
+                        generationStrategy: 'increment'
+                    },
+                    {
+                        name: 'name',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'age',
+                        type: 'INTEGER',
+                        isNullable: false
+                    },
+                    {
+                        name: 'phone',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'email',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'idTeam',
+                        type: 'INTEGER',
+                        isNullable: false
+                    },
+                    {
+                        name: 'subject',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'suggestion',
+                        type: 'TEXT',
+                        isNullable: false
+                    },
+                    {
+                        name: 'created_at',
+                        type: 'TEXT',
+                        isNullable: false
+                    }
+                ]
+            })
+        )
+            
+
         await queryRunner.createForeignKey('team', new TableForeignKey({
             columnNames: ['idStadium'],
             referencedColumnNames: ['id'],
             referencedTableName: 'stadium',
+            onDelete: 'RESTRICT',
+            onUpdate: "RESTRICT",
+        }));
+
+        await queryRunner.createForeignKey('suggestion', new TableForeignKey({
+            columnNames: ['idTeam'],
+            referencedColumnNames: ['id'],
+            referencedTableName: 'team',
             onDelete: 'RESTRICT',
             onUpdate: "RESTRICT",
         }));

@@ -43,7 +43,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .snackbar-success {
-  background: #73a942;
-  color: #f3f7f0;
-  border-color: #60712f;
+  background: #73a942 !important;
+  color: #f3f7f0 !important;
+  border-color: #60712f !important;
 }

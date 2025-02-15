@@ -13,6 +13,7 @@ import { Suggestion } from './suggestion/entities/suggestion.entity';
 import { Mail } from './mail/entities/mail.entity';
 import { Stadium } from './stadium/entities/stadium.entity';
 import join from 'path';
+import { ConfigModule } from '@nestjs/config';
 
 
 @Module({
@@ -39,6 +40,9 @@ import join from 'path';
     SuggestionsModule,
     MailModule,
     StadiumModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+    })
   ],
   controllers: [AppController],
   providers: [AppService],

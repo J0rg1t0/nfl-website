@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateMailDto } from './dto/create-mail.dto';
 import { UpdateMailDto } from './dto/update-mail.dto';
 import { MailerService } from '@nestjs-modules/mailer';
+import { MailPayload } from './mail.interface';
 
 @Injectable()
 export class MailService {
@@ -9,18 +10,17 @@ export class MailService {
     private readonly mailerService: MailerService,
   ) {}
 
-  async sendMail() {
+  async sendMail(mailPayload: MailPayload) {
     try {
-      await this.mailerService.sendMail({
-        to: '', // list of receivers
-        from: '', // sender address
-        subject: 'Testing Nest MailerModule ✔', // Subject line
-        text: 'welcome', // plaintext body
-        html: '<b>welcome</b>', // HTML body content
+      const envio = await this.mailerService.sendMail({
+        to: process.env.MAIL_RECEIVER,
+        from: `No Reply <${process.env.MAIL_USER}>`, 
+        subject: mailPayload.subject, 
+        text: mailPayload.text, 
       });
-      return {status: true, message: 'Email enviado com sucesso!'};
+      return envio;
     } catch (error) {
-      return {'Erro ao enviar email!'};
+      throw new Error(error);
     }
   }
   create(createMailDto: CreateMailDto) {

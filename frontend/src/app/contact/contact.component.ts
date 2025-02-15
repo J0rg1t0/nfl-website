@@ -1,5 +1,5 @@
 // src/app/contact/contact.component.ts
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
@@ -11,11 +11,12 @@ import { CommonModule } from '@angular/common';
   selector: 'app-contact',
   imports: [ReactiveFormsModule, RouterModule, MatSnackBarModule, CommonModule],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
   contactForm: FormGroup;
   teams: Team[] = [];
+  disableButton = false;
 
   constructor(private fb: FormBuilder, 
     private snackBar: MatSnackBar,
@@ -24,11 +25,11 @@ export class ContactComponent {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       age: ['', Validators.required],
-      team: ['', Validators.required],
+      idTeam: ['', Validators.required],
       phone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       subject: ['', Validators.required],
-      message: ['', Validators.required]
+      suggestion: ['', Validators.required]
     });
   }
 
@@ -37,12 +38,24 @@ export class ContactComponent {
   }
 
   onSubmit() {
+    this.disableButton = true;
     if (this.contactForm.valid) {
-      // Enviar dados do formulário (aqui você pode integrar com seu backend)
-      console.log(this.contactForm.value);
-      this.snackBar.open('E-mail enviado com sucesso!', 'Fechar', {
-        duration: 3000,
-        panelClass: ['snackbar-success']
+
+      this.requestIntegrationService.postSuggestion(this.contactForm.value)
+      .then(() => {
+        this.contactForm.reset();
+        this.snackBar.open('E-mail enviado com sucesso!', 'Fechar', {
+          duration: 3000,
+          panelClass: ['snackbar-success']
+        });
+        this.disableButton = false;
+      })
+      .catch(() => {
+        this.snackBar.open('Erro ao enviar e-mail!', 'Fechar', {
+          duration: 300000,
+          panelClass: ['snackbar-error']
+        });
+        this.disableButton = false;
       });
     }
   }

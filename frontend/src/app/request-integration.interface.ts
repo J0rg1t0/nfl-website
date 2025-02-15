@@ -43,7 +43,11 @@ export interface News {
 export interface Suggestions {
     id: number;
     name: string;
+    age: number;
+    phone: string;
     email: string;
+    idTeam: number;
+    subject: string;
     suggestion: string;
     created_at: Date;
 }
